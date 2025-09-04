@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Value</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #444;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #575757;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Konten utama */
+    .container {
+      margin-top: 70px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <h2 style="margin-left: 20px;">Peningkatan Diri</h2>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="#">Home</a>
+    <a href="#">Upgrade Otak</a>
+    <a href="#">Upgrade Fisik</a>
+    <a href="#">Upgrade Finansial</a>
+    <a href="#">Tentang Kami</a>
+  </div>
+
+  <!-- Konten -->
+  <div class="container">
+    <div class="card">
+      <h3>Upgrade Otak</h3>
+      <p>Tips meningkatkan kecerdasan, fokus, dan produktivitas.</p>
+    </div>
+    <div class="card">
+      <h3>Upgrade Kulit</h3>
+      <p>Perawatan kulit agar sehat, segar, dan bercahaya.</p>
+    </div>
+    <div class="card">
+      <h3>Upgrade Fisik</h3>
+      <p>Latihan, pola makan, dan gaya hidup sehat.</p>
+    </div>
+    <div class="card">
+      <h3>Upgrade Finansial</h3>
+      <p>Manajemen keuangan, investasi, dan cara menambah penghasilan.</p>
+    </div>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>
