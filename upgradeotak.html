@@ -176,9 +176,16 @@
       display: flex;
       justify-content: center;
       gap: 20px; /* jarak antar kotak */
+      flex-wrap: nowrap;
+      overflow-x: auto;
       margin-top: 40px;
     }
 
+     @media (max-widht: 768px) {
+      .navbar-center input {
+        width: 70%;
+      }
+    
     .card {
       background: white;
       border: 1px solid #ccc;
@@ -187,6 +194,9 @@
       text-align: center;
       padding: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 1600px;
+      max-width: 70%;
+     }
     }
 
     .card:hover {
