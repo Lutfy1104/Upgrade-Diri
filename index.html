@@ -190,6 +190,34 @@
     flex-direction: row-reverse; /* Membalik posisi flex */
   }
 
+   @media (max-width: 768px) {
+      .navbar-center input {
+        width: 70%;
+      }
+
+       /* container paling atas jadi kecil berjajar */
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .container .card {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  /* gambar + teks jadi ke bawah */
+  .container-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+    }
+
   /* Footer */
   .container-footer {
     display: flex;
