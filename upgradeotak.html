@@ -185,7 +185,25 @@
       .navbar-center input {
         width: 70%;
       }
-    
+
+      .container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .container .card {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+   /* konten produk jadi ke bawah */
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+     }
+
     .card {
       background: white;
       border: 1px solid #ccc;
@@ -194,10 +212,8 @@
       text-align: center;
       padding: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex: 0 0 1600px;
-      max-width: 70%;
+      max-width: 100%;
      }
-    }
 
     .card:hover {
       transform: scale(1.05); /* efek hover */
